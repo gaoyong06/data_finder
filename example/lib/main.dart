@@ -50,7 +50,27 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Column(
+            children: [
+              Text('Running on: $_platformVersion\n'),
+              RaisedButton(onPressed: () => DataFinder.initDataFinder("204291", showLog: true), child: Text("init")),
+              RaisedButton(onPressed: () => DataFinder.setUserUniqueID("sf180"), child: Text("setUserUniqueID")),
+              RaisedButton(
+                onPressed: () => DataFinder.onEventV3("predefine_pageview", params: {
+                  "url_path": "clue/clue_info",
+                  "title": "线索详情",
+                }),
+                child: Text("onEventV3-Page"),
+              ),
+              RaisedButton(
+                onPressed: () => DataFinder.onEventV3("click_button", params: {
+                  "name": "article_click",
+                  "label": "内容-文章按钮",
+                }),
+                child: Text("onEventV3-Btn"),
+              ),
+            ],
+          ),
         ),
       ),
     );
