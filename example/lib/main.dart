@@ -53,10 +53,16 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               Text('Running on: $_platformVersion\n'),
-              RaisedButton(onPressed: () => DataFinder.initDataFinder("204291", showLog: true), child: Text("init")),
-              RaisedButton(onPressed: () => DataFinder.setUserUniqueID("sf180"), child: Text("setUserUniqueID")),
               RaisedButton(
-                onPressed: () => DataFinder.onEventV3("predefine_pageview", params: {
+                  onPressed: () =>
+                      DataFinder.initDataFinder("204291", showLog: true),
+                  child: Text("init")),
+              RaisedButton(
+                  onPressed: () => DataFinder.setUserUniqueID("sf180"),
+                  child: Text("setUserUniqueID")),
+              RaisedButton(
+                onPressed: () =>
+                    DataFinder.onEventV3("predefine_pageview", params: {
                   "url_path": "clue/clue_info",
                   "title": "线索详情",
                 }),
