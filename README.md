@@ -89,7 +89,6 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   DataFinder.setUserUniqueID("sf180")
 ```
 
-
 **上报行为埋点** 
 
 方法名称: DataFinder.onEventV3
@@ -108,8 +107,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
       "params2": "value2",
    }
 ```
-[示例程序]()
-
+[示例程序](https://github.com/gaoyong06/data_finder/blob/main/example/lib/main.dart)
 
 ## ios配置
 
@@ -117,7 +115,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   
   在/Users/gaoyong/Documents/work/data_finder/example/ios/Podfile 文件中增加
   source 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
-  [示例程序](...)
+  [示例程序](https://github.com/gaoyong06/data_finder/blob/main/example/ios/Podfile)
 
 - 执行pod install --repo-update
   
@@ -131,7 +129,6 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
 - flutter build ios --no-codesign
 - flutter run
 
-  
 ## 开发过程中遇到的问题及处理办法
 
 - [!] The 'Pods-Runner' target has transitive dependencies that include statically linked binaries: (RangersAppLog)
@@ -145,12 +142,12 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   将# platform :ios, '9.0' 修改为 platform :ios, '9.0'
 
 - Command PhaseScriptExecution failed with a nonzero exit code
-> 处理办法：Runner project > Info > Configurations 设置错误，正确的设置方法，参考这个[设置和验证方式](https://github.com/flutter/flutter/issues/49495#issuecomment-583066933)
+  > 处理办法：Runner project > Info > Configurations 设置错误，正确的设置方法，参考这个[设置和验证方式](https://github.com/flutter/flutter/issues/49495#issuecomment-583066933)
 
 - Flutter/Debug.xcconfig:2: could not find included file 'Generated.xcconfig' in search paths
 
-> 处理办法：https://stackoverflow.com/questions/54321180/error-could-not-find-included-file-generated-xcconfig-in-search-paths-in-tar
-因为没有设置签名，所以先执行 flutter build ios --no-codesign
+  > 处理办法：https://stackoverflow.com/questions/54321180/error-could-not-find-included-file-generated-xcconfig-in-search-paths-in-tar
+  因为没有设置签名，所以先执行 flutter build ios --no-codesign
 
 - invalid reuse after initialization failure
 
