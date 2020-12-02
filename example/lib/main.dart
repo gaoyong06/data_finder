@@ -54,8 +54,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text('Running on: $_platformVersion\n'),
               RaisedButton(
-                  onPressed: () =>
-                      DataFinder.initDataFinder("204291", showLog: true),
+                  onPressed: () => DataFinder.init("204291", showLog: true),
                   child: Text("init")),
               RaisedButton(
                   onPressed: () => DataFinder.setUserUniqueID("sf180"),

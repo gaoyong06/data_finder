@@ -23,7 +23,7 @@ public class SwiftDataFinderPlugin: NSObject, FlutterPlugin {
     case "getPlatformVersion":
         result("iOS " + UIDevice.current.systemVersion);
     case "init":
-        initDataFinder(call: call, result: result);
+        init(call: call, result: result);
     case "setUserUniqueID":
         setUserUniqueID(call: call, result: result);
     case "onEventV3":
@@ -34,7 +34,7 @@ public class SwiftDataFinderPlugin: NSObject, FlutterPlugin {
   }
     
   //初始化SDK
-  private func initDataFinder(call: FlutterMethodCall, result: FlutterResult) {
+  private func init(call: FlutterMethodCall, result: FlutterResult) {
     
     let arguments: [String:Any] = call.arguments as! [String:Any]
     let appId: String = arguments["appId"] as? String ?? "";

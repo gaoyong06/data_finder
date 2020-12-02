@@ -12,15 +12,18 @@ class DataFinder {
 
   ///
   /// 初始化dataFinder
-  /// 传入appId channel
-  ///
-  static void initDataFinder(String appId, {String channel = 'app', bool showLog = false}) {
-    _channel.invokeMethod("init", {"appId": appId, "channel": channel, "showLog": showLog});
+  /// String appId: 在dataFinder后台申请的appId(应用列表中的应用ID)
+  /// String channel: 渠道名称,iOS一般默认App Store
+  /// bool showLog: 是否在控制台输出日志，可用于观察用户行为日志上报情况
+  static void init(String appId,
+      {String channel = 'app', bool showLog = false}) {
+    _channel.invokeMethod(
+        "init", {"appId": appId, "channel": channel, "showLog": showLog});
   }
 
   ///
-  ///用户登陆之后传入登陆用户唯一id可传入sid
-  ///
+  /// 用户登录后设置登录用户uuid
+  /// String userUniqueID: 自己的账号体系ID, 并保证其唯一性
   static void setUserUniqueID(String userUniqueID) {
     _channel.invokeMethod("setUserUniqueID", {
       "userUniqueID": userUniqueID,
@@ -28,10 +31,9 @@ class DataFinder {
   }
 
   ///
-  /// 埋点
-  /// event为事件名
-  /// params为额外参数
-  ///
+  /// 上报行为埋点
+  /// String event: 事件名称
+  /// Map params: 事件属性,一个事件可以对应多个属性
   static void onEventV3(String event, {Map params}) {
     _channel.invokeMethod("onEventV3", {
       "event": event,
