@@ -131,6 +131,10 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
 
 ## 开发过程中遇到的问题及处理办法
 
+- [!] CocoaPods did not set the base configuration of your project because your project already has a custom config set. In order for CocoaPods integration to work at all, please either set the base configurations of the target `Runner` to `Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig` or include the `Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig` in your build configuration (`Flutter/Release.xcconfig`).
+  
+  >处理办法：[参考文档](https://github.com/flutter/flutter/issues/49495#issuecomment-583066933)
+
 - [!] The 'Pods-Runner' target has transitive dependencies that include statically linked binaries: (RangersAppLog)
   
   >处理办法：修改/Users/gaoyong/Documents/work/data_finder/example/ios/Podfile 注释掉 use_frameworks!
@@ -147,16 +151,13 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
 - Flutter/Debug.xcconfig:2: could not find included file 'Generated.xcconfig' in search paths
 
   > 处理办法：https://stackoverflow.com/questions/54321180/error-could-not-find-included-file-generated-xcconfig-in-search-paths-in-tar
-  因为没有设置签名，所以先执行 flutter build ios --no-codesign
+  另：如果没有设置签名，则执行 flutter build ios --no-codesign
 
 - invalid reuse after initialization failure
 
-> 处理办法：重启了一次电脑没在出现了
+  > 处理办法：重启了一次电脑没在出现了
 
 ## 遗留的问题
-- [!] CocoaPods did not set the base configuration of your project because your project already has a custom config set. In order for CocoaPods integration to work at all, please either set the base configurations of the target `Runner` to `Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig` or include the `Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig` in your build configuration (`Flutter/Release.xcconfig`).
-  
-  处理办法：见图示
 
 - Action Required: You must set a build name and number in the pubspec.yaml file version field before submitting to the App Store.
 
