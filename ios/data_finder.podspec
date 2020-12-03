@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'data_finder'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'data_finder是一个flutter插件'
   s.description      = <<-DESC
   data_finder是一个flutter插件，在flutter平台实现了字节跳动的DataFinder的功能

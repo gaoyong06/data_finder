@@ -25,7 +25,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   - 上报行为埋点
 
 ## 安装
-- 在项目的pubspec.yaml中在增加下面配置：data_finder: ^0.0.3
+- 在项目的pubspec.yaml中在增加下面配置：data_finder: ^0.0.4
 - 然后在项目根目录(pubspec.yaml 所在的目录)执行命令：flutter pub get
 
 ## 使用方法

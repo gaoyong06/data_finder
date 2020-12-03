@@ -1,10 +1,8 @@
 /*
- * @Author: your name
- * @Date: 2020-12-01 17:24:41
- * @LastEditTime: 2020-12-03 14:36:44
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: /data_finder/example/lib/main.dart
+ * @Author: gaoyong06@qq.com 
+ * @Date: 2020-11-30 12:56:02 
+ * @Last Modified by: gaoyong06@qq.com
+ * @Last Modified time: 2020-11-30 12:56:02
  */
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -70,15 +68,15 @@ class _MyAppState extends State<MyApp> {
               RaisedButton(
                 onPressed: () =>
                     DataFinder.onEventV3("predefine_pageview", params: {
-                  "url_path": "clue/clue_info",
-                  "title": "线索详情",
+                  "url_path": "article/article_detail",
+                  "title": "页面浏览",
                 }),
                 child: Text("onEventV3-Page"),
               ),
               RaisedButton(
                 onPressed: () => DataFinder.onEventV3("click_button", params: {
-                  "name": "article_click",
-                  "label": "内容-文章按钮",
+                  "name": "btn_click",
+                  "label": "按钮点击",
                 }),
                 child: Text("onEventV3-Btn"),
               ),
