@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-12-01 17:24:41
+ * @LastEditTime: 2020-12-03 14:36:44
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /data_finder/example/lib/main.dart
+ */
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -54,8 +62,8 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text('Running on: $_platformVersion\n'),
               RaisedButton(
-                  onPressed: () => DataFinder.init("204291", showLog: true),
-                  child: Text("init")),
+                  onPressed: () => DataFinder.start("204291", showLog: true),
+                  child: Text("start")),
               RaisedButton(
                   onPressed: () => DataFinder.setUserUniqueID("sf180"),
                   child: Text("setUserUniqueID")),

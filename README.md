@@ -1,10 +1,8 @@
 <!--
- * @Author: your name
- * @Date: 2020-11-30 13:24:58
- * @LastEditTime: 2020-12-02 14:11:10
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /data_finder/README.md
+ * @Author: gaoyong06@qq.com 
+ * @Date: 2020-11-30 12:56:02 
+ * @Last Modified by: gaoyong06@qq.com
+ * @Last Modified time: 2020-11-30 12:56:02
 -->
 |      |      |
 | ---- | ---- |
@@ -13,11 +11,11 @@
 
 # data_finder
 
-字节跳动 [数据发现者DataFinder](https://datarangers.com.cn/product/datafinder)的Flutter插件
+字节跳动[数据漫游者](https://datarangers.com.cn/)的基础分析产品[数据发现者DataFinder](https://datarangers.com.cn/product/datafinder)的Flutter插件
 
 ## 介绍
 
-data_finder是一个flutter plugin，为满足在使用flutter开发的App上使用字节跳动提供的数据分析工具DataFinder而开发的一个flutter plugin，目前支持Android, iOS两个平台
+data_finder是一个flutter plugin，为满足在使用flutter开发的App上使用字节跳动提供的[数据漫游者](https://datarangers.com.cn/)的基础分析产品[数据发现者DataFinder](https://datarangers.com.cn/product/datafinder)而开发的一个flutter plugin，目前支持Android, iOS两个平台
 ## 主要功能
 
 - 设备注册/激活
@@ -27,7 +25,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   - 上报行为埋点
 
 ## 安装
-- 在项目的pubspec.yaml中在增加下面配置：data_finder: ^0.0.2
+- 在项目的pubspec.yaml中在增加下面配置：data_finder: ^0.0.3
 - 然后在项目根目录(pubspec.yaml 所在的目录)执行命令：flutter pub get
 
 ## 使用方法
@@ -36,7 +34,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   
   //初始化SDK
   //备注：204291为申请的appId
-  DataFinder.init("204291", channel: "App Store", showLog: true)
+  DataFinder.start("204291", channel: "App Store", showLog: true)
 
   //登录态变化调用(设置uuid)
   //备注：sf180为系统自身的uid
@@ -55,7 +53,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
 
 **初始化dataFinder** 
 
-方法名称: DataFinder.init
+方法名称: DataFinder.start
 
 参数说明:
 
@@ -69,7 +67,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
 ```
   //初始化SDK
   //备注：204291为申请的appId
-  DataFinder.init("204291", channel: "App Store", showLog: true)
+  DataFinder.start("204291", channel: "App Store", showLog: true)
 ```
 
 **用户登录后设置登录用户uuid** 
@@ -109,7 +107,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
 ```
 [示例程序](https://github.com/gaoyong06/data_finder/blob/main/example/lib/main.dart)
 
-## ios配置
+## iOS平台配置
 
 - 修改Podfile文件
   
@@ -122,7 +120,21 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   在/Users/gaoyong/Documents/work/data_finder/example/ 目录下执行
   pod install --repo-update
 
-*上面的目录/Users/gaoyong/Documents/work/data_finder/example 为示例，实际场景应该是开发者自己的项目根目录(即含有pubspec.yaml文件的目录)*  
+## Android平台配置
+
+- 无需配置
+  
+## 配置的其他问题
+
+- 理论上按上面的配置就可以正常工作了，如果出现其他问题可能会因为版本或者环境问题导致，可先阅读一下DataFinder的提供的应用[接入文档](https://datarangers.com.cn/help/doc?lid=1097&did=8547)
+
+- 因为现在没有涉及URL Scheme，所以上面没有配置，如果有需要参考接入文档,[iOS添加URL Scheme](https://datarangers.com.cn/help/doc?lid=1097&did=8547#_4-%E6%B7%BB%E5%8A%A0url-scheme) 和[Android添加url scheme](https://datarangers.com.cn/help/doc?lid=1097&did=10942#_2-3-%E6%B7%BB%E5%8A%A0url-scheme)
+
+- 如果在接入过程中遇到其他问题欢迎大家提交issue,或者pr
+
+## 执行示例程序
+
+  如果希望执行一下该项目的示例程序的话看看效果的话，clone 或者 fork 该项目到本地硬盘后，cd 到 ../data_finder/example 目录下后，如果想看一下Android的效果，则cd至android 目录（../data_finder/example/android）执行 flutter run, 如果想看一下iOS的效果，用xcode 打开../data_finder/example/ios/Runner.xcworkspace, 编译执行即可
 
 ## 在ios上测试使用的命令
 
@@ -153,32 +165,5 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   > 处理办法：https://stackoverflow.com/questions/54321180/error-could-not-find-included-file-generated-xcconfig-in-search-paths-in-tar
   另：如果没有设置签名，则执行 flutter build ios --no-codesign
 
-- invalid reuse after initialization failure
-
-  > 处理办法：重启了一次电脑没在出现了
-
-## 遗留的问题
-
-- Action Required: You must set a build name and number in the pubspec.yaml file version field before submitting to the App Store.
-
-- Unable to install /Users/gaoyong/Documents/work/data_finder/example/build/ios/iphonesimulator/Runner.app on 3CBAC47F-E2D4-426A-B0DE-72D995143902. This is sometimes caused by a malformed plist file:
-  ProcessException: Process exited abnormally:
-  An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=22):
-  Failed to install the requested application
-  The application's Info.plist does not contain CFBundleVersion.
-  Ensure your bundle contains a CFBundleVersion.
-    Command: /usr/bin/xcrun simctl install 3CBAC47F-E2D4-426A-B0DE-72D995143902 /Users/gaoyong/Documents/work/data_finder/example/build/ios/iphonesimulator/Runner.app
-  Error launching application on iPhone 12 Pro Max.
-
-  $(FLUTTER_BUILD_NUMBER)
-
-- Unable to install /Users/gaoyong/Documents/work/data_finder/example/build/ios/iphonesimulator/Runner.app on 3CBAC47F-E2D4-426A-B0DE-72D995143902. This is sometimes caused by a malformed plist file:
-  ProcessException: Process exited abnormally:
-  An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=22):
-  Failed to install the requested application
-  The application's Info.plist does not contain CFBundleShortVersionString.
-  Ensure your bundle contains a CFBundleShortVersionString.
-    Command: /usr/bin/xcrun simctl install 3CBAC47F-E2D4-426A-B0DE-72D995143902 /Users/gaoyong/Documents/work/data_finder/example/build/ios/iphonesimulator/Runner.app
-  Error launching application on iPhone 12 Pro Max.
-
-  $(FLUTTER_BUILD_NAME)
+## 备注
+    - *上面文档中提到的目录/Users/gaoyong/Documents/work/data_finder/example 仅为示例，实际场景应该是开发者自己的项目根目录(即含有pubspec.yaml文件的目录)*  

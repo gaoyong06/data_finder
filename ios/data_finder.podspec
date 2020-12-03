@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'data_finder'
-  s.version          = '0.0.1'
+  s.version          = '0.0.3'
   s.summary          = 'data_finder是一个flutter插件'
   s.description      = <<-DESC
   data_finder是一个flutter插件，在flutter平台实现了字节跳动的DataFinder的功能
@@ -15,16 +15,8 @@ Pod::Spec.new do |s|
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  # s.dependency 'RangersAppLog', :git => 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
-  # s.dependency 'RangersAppLog','~> 5.6.1',:subspecs => ['Host/CN','Core','Unique','UITracker','Log','Picker']
-  s.subspec 'RangersAppLog' do |cs|
-    cs.dependency 'RangersAppLog/Host/CN'
-    cs.dependency 'RangersAppLog/Core'
-    cs.dependency 'RangersAppLog/Unique'
-    cs.dependency 'RangersAppLog/UITracker'
-    cs.dependency 'RangersAppLog/Log'
-    cs.dependency 'RangersAppLog/Picker'
-  end
+  s.dependency 'RangersAppLog','~> 5.6.1'
+
   s.platform = :ios, '8.0'
 
   # Flutter.framework does not contain a i386 slice.

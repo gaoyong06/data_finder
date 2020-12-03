@@ -22,8 +22,8 @@ public class SwiftDataFinderPlugin: NSObject, FlutterPlugin {
     switch call.method {
     case "getPlatformVersion":
         result("iOS " + UIDevice.current.systemVersion);
-    case "init":
-        init(call: call, result: result);
+    case "start":
+        start(call: call, result: result);
     case "setUserUniqueID":
         setUserUniqueID(call: call, result: result);
     case "onEventV3":
@@ -34,9 +34,10 @@ public class SwiftDataFinderPlugin: NSObject, FlutterPlugin {
   }
     
   //初始化SDK
-  private func init(call: FlutterMethodCall, result: FlutterResult) {
+  private func start(call: FlutterMethodCall, result: FlutterResult) {
     
     let arguments: [String:Any] = call.arguments as! [String:Any]
+    print("start run, \(arguments)");
     let appId: String = arguments["appId"] as? String ?? "";
     let channel: String = arguments["channel"] as? String ?? ""
     let showLog: Bool = arguments["showLog"] as? Bool ?? false
@@ -62,6 +63,7 @@ public class SwiftDataFinderPlugin: NSObject, FlutterPlugin {
   private func setUserUniqueID(call: FlutterMethodCall, result: FlutterResult) {
     
     let arguments: [String:Any] = call.arguments as! [String:Any]
+    print("setUserUniqueID run, \(arguments)");
     let userUniqueID: String = arguments["userUniqueID"] as? String ?? ""
     BDAutoTrack.setCurrentUserUniqueID(userUniqueID)
     return result(true)
@@ -71,6 +73,7 @@ public class SwiftDataFinderPlugin: NSObject, FlutterPlugin {
   private func onEventV3(call: FlutterMethodCall, result: FlutterResult) {
     
     let arguments: [String:Any] = call.arguments as! [String:Any]
+    print("onEventV3 run, \(arguments)");
     let event: String = arguments["event"] as? String ?? ""
     let params:[String:Any]? = arguments["event"] as? [String:Any] ?? nil
     BDAutoTrack.eventV3(event, params: params)

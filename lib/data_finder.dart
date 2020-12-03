@@ -1,5 +1,10 @@
+/*
+ * @Author: gaoyong06@qq.com 
+ * @Date: 2020-11-30 12:56:02 
+ * @Last Modified by: gaoyong06@qq.com
+ * @Last Modified time: 2020-11-30 12:56:02
+ */
 import 'dart:async';
-
 import 'package:flutter/services.dart';
 
 class DataFinder {
@@ -15,10 +20,10 @@ class DataFinder {
   /// String appId: 在dataFinder后台申请的appId(应用列表中的应用ID)
   /// String channel: 渠道名称,iOS一般默认App Store
   /// bool showLog: 是否在控制台输出日志，可用于观察用户行为日志上报情况
-  static void init(String appId,
+  static void start(String appId,
       {String channel = 'app', bool showLog = false}) {
     _channel.invokeMethod(
-        "init", {"appId": appId, "channel": channel, "showLog": showLog});
+        "start", {"appId": appId, "channel": channel, "showLog": showLog});
   }
 
   ///

@@ -1,18 +1,26 @@
 PODS:
-  - data_finder (0.0.1):
-    - data_finder/RangersAppLog (= 0.0.1)
+  - data_finder (0.0.3):
     - Flutter
-  - data_finder/RangersAppLog (0.0.1):
-    - Flutter
-    - RangersAppLog/Core
-    - RangersAppLog/Host/CN
-    - RangersAppLog/Log
-    - RangersAppLog/Picker
-    - RangersAppLog/UITracker
-    - RangersAppLog/Unique
+    - RangersAppLog (~> 5.6.1)
   - Flutter (1.0.0)
+  - RangersAppLog (5.6.1):
+    - RangersAppLog/Core (= 5.6.1)
+    - RangersAppLog/Host (= 5.6.1)
+    - RangersAppLog/Log (= 5.6.1)
+    - RangersAppLog/Picker (= 5.6.1)
+    - RangersAppLog/UITracker (= 5.6.1)
+    - RangersAppLog/Unique (= 5.6.1)
   - RangersAppLog/Core (5.6.1)
+  - RangersAppLog/Host (5.6.1):
+    - RangersAppLog/Core
+    - RangersAppLog/Host/CN (= 5.6.1)
+    - RangersAppLog/Host/SG (= 5.6.1)
+    - RangersAppLog/Host/VA (= 5.6.1)
   - RangersAppLog/Host/CN (5.6.1):
+    - RangersAppLog/Core
+  - RangersAppLog/Host/SG (5.6.1):
+    - RangersAppLog/Core
+  - RangersAppLog/Host/VA (5.6.1):
     - RangersAppLog/Core
   - RangersAppLog/Log (5.6.1):
     - RangersAppLog/Core
@@ -39,7 +47,7 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  data_finder: b995d60759dc7400b6a408245d26d8936236f8af
+  data_finder: 9dc4d866525347413b6c717a17676d17fd77739b
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   RangersAppLog: a14009b621a66bd312d677247b3c6e612e8e8aba
 
