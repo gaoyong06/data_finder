@@ -34,7 +34,7 @@ class DataFinderPlugin : FlutterPlugin, MethodCallHandler {
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         when (call.method) {
             "getPlatformVersion" -> result.success("Android ${android.os.Build.VERSION.RELEASE}")
-            "init" -> initDataFinder(call, result)
+            "init" -> init(call, result)
             "setUserUniqueID" -> setUserUniqueID(call, result)
             "onEventV3" -> onEventV3(call, result)
             else -> result.notImplemented()
@@ -47,7 +47,7 @@ class DataFinderPlugin : FlutterPlugin, MethodCallHandler {
     }
 
 
-    private fun initDataFinder(@NonNull call: MethodCall, @NonNull result: Result) {
+    private fun init(@NonNull call: MethodCall, @NonNull result: Result) {
         val appId = call.argument<String>("appId")
         if (TextUtils.isEmpty(appId)) {
             println("appId不能为空")
