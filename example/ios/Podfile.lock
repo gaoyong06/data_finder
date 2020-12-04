@@ -1,5 +1,5 @@
 PODS:
-  - data_finder (0.0.3):
+  - data_finder (0.0.5):
     - Flutter
     - RangersAppLog (~> 5.6.1)
   - Flutter (1.0.0)
@@ -47,10 +47,10 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  data_finder: 9dc4d866525347413b6c717a17676d17fd77739b
+  data_finder: d22a6c0df128896221ae8fe3e3eaf4b2d59f60ff
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   RangersAppLog: a14009b621a66bd312d677247b3c6e612e8e8aba
 
-PODFILE CHECKSUM: 5192e4e387976211f116ec5d6edde75f1604f0c7
+PODFILE CHECKSUM: 728901d964d182e7a4cef1f3d923fd88d2eae126
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

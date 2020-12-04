@@ -1,6 +1,6 @@
 name: data_finder
-description: DataFinder flutter plugin
-version: 0.0.4
+description: bytedance DataFinder flutter plugin Support Android and iOS Platform
+version: 0.0.6
 homepage: https://github.com/gaoyong06/data_finder
 
 environment:
