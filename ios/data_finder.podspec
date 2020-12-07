@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.dependency 'RangersAppLog','~> 5.6.1'
-  # s.dependency 'RangersAppLog', '~> 5.6.1',:git => 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
   s.frameworks = 'Foundation'
   s.requires_arc = true
   s.platform = :ios, '8.0'
