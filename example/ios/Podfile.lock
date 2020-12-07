@@ -1,5 +1,5 @@
 PODS:
-  - data_finder (0.0.5):
+  - data_finder (0.0.6):
     - Flutter
     - RangersAppLog (~> 5.6.1)
   - Flutter (1.0.0)
@@ -10,31 +10,11 @@ PODS:
     - RangersAppLog/Picker (= 5.6.1)
     - RangersAppLog/UITracker (= 5.6.1)
     - RangersAppLog/Unique (= 5.6.1)
-  - RangersAppLog/Core (5.6.1)
-  - RangersAppLog/Host (5.6.1):
-    - RangersAppLog/Core
-    - RangersAppLog/Host/CN (= 5.6.1)
-    - RangersAppLog/Host/SG (= 5.6.1)
-    - RangersAppLog/Host/VA (= 5.6.1)
-  - RangersAppLog/Host/CN (5.6.1):
-    - RangersAppLog/Core
-  - RangersAppLog/Host/SG (5.6.1):
-    - RangersAppLog/Core
-  - RangersAppLog/Host/VA (5.6.1):
-    - RangersAppLog/Core
-  - RangersAppLog/Log (5.6.1):
-    - RangersAppLog/Core
-  - RangersAppLog/Picker (5.6.1):
-    - RangersAppLog/Log
-    - RangersAppLog/UITracker
-  - RangersAppLog/UITracker (5.6.1):
-    - RangersAppLog/Core
-  - RangersAppLog/Unique (5.6.1):
-    - RangersAppLog/Core
 
 DEPENDENCIES:
   - data_finder (from `.symlinks/plugins/data_finder/ios`)
   - Flutter (from `Flutter`)
+  - RangersAppLog (~> 5.6.1)
 
 SPEC REPOS:
   https://github.com/bytedance/cocoapods_sdk_source_repo.git:
@@ -47,10 +27,10 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  data_finder: d22a6c0df128896221ae8fe3e3eaf4b2d59f60ff
+  data_finder: be0203aaba26582b90caf106f68f2d7eac17e484
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   RangersAppLog: a14009b621a66bd312d677247b3c6e612e8e8aba
 
-PODFILE CHECKSUM: 728901d964d182e7a4cef1f3d923fd88d2eae126
+PODFILE CHECKSUM: 40e9ced716f27962a4beeea2c1c538ec4c2ce375
 
 COCOAPODS: 1.10.0
