@@ -25,7 +25,7 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   - 上报行为埋点
 
 ## 安装
-- 在项目的pubspec.yaml中在增加下面配置：data_finder: ^0.0.6
+- 在项目的pubspec.yaml中在增加下面配置：data_finder: ^0.0.7
 - 然后在项目根目录(pubspec.yaml 所在的目录)执行命令：flutter pub get
 
 ## 使用方法
@@ -111,14 +111,28 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
 
 - 修改Podfile文件
   
-  在/Users/gaoyong/Documents/work/data_finder/example/ios/Podfile 文件中增加
+  在/Users/gaoyong/Documents/work/data_finder/example/ios/Podfile 文件中增加:
+
+  ```
   source 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
+  ```
+
+  ```
+  pre_install do |installer|
+    # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+  end
+  ```
+
   [示例程序](https://github.com/gaoyong06/data_finder/blob/main/example/ios/Podfile)
 
 - 执行pod install --repo-update
   
   在/Users/gaoyong/Documents/work/data_finder/example/ 目录下执行
+  
+  ```
   pod install --repo-update
+  ```
 
 ## Android平台配置
 

@@ -4,6 +4,9 @@
  * @Last Modified by: gaoyong06@qq.com
  * @Last Modified time: 2020-11-30 12:56:02
 -->
+## 0.0.7
+
+  * Update documentation
 ## 0.0.6
 
   * Bugfix：iOS Compile fail

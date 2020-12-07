@@ -5,7 +5,7 @@
   
 Pod::Spec.new do |s|
   s.name             = 'data_finder'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'data_finder是一个flutter插件'
   s.description      = <<-DESC
   data_finder是一个flutter插件，在flutter平台实现了字节跳动的DataFinder的功能
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/gaoyong06/data_finder'
   s.license          = {:type => 'MIT', :file => '../LICENSE' }
   s.author           = { 'gaoyong' => 'gaoyong06@qq.com' }
-  s.source           = { :path => '.' }
+  s.source           = { :git=> 'https://github.com/gaoyong06/data_finder.git', :tag =>s.version}
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'

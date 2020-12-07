@@ -1,5 +1,5 @@
 # 参考文档 https://datarangers.com.cn/help/doc?lid=1097&did=8547
-source 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
+source'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
 
 # Uncomment this line to define a global platform for your project
 platform :ios, '9.0'
