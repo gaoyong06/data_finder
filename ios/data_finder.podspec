@@ -11,14 +11,14 @@ Pod::Spec.new do |s|
   data_finder是一个flutter插件，在flutter平台实现了字节跳动的DataFinder的功能
                        DESC
   s.homepage         = 'https://github.com/gaoyong06/data_finder'
-  s.license          = { :file => '../LICENSE' }
+  s.license          = {:type => 'MIT', :file => '../LICENSE' }
   s.author           = { 'gaoyong' => 'gaoyong06@qq.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  # s.dependency 'RangersAppLog','~> 5.6.1'
-  s.dependency 'RangersAppLog', '~> 5.6.1' , :git => 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
+  s.dependency 'RangersAppLog','~> 5.6.1'
+  # s.dependency 'RangersAppLog', '~> 5.6.1',:git => 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
   s.frameworks = 'Foundation'
   s.requires_arc = true
   s.platform = :ios, '8.0'
