@@ -33,7 +33,10 @@ flutter_ios_podfile_setup
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
-  pod 'RangersAppLog','~> 5.6.1'
+  
+  # 因为RangersAppLog5.6.3 现在(2020/12/08)还有bug,这里强制使用5.6.1
+  pod 'RangersAppLog','5.6.1'
+  
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 

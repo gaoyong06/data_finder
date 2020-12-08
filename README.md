@@ -117,6 +117,11 @@ data_finder是一个flutter plugin，为满足在使用flutter开发的App上使
   source 'https://github.com/bytedance/cocoapods_sdk_source_repo.git'
   ```
 
+  因为RangersAppLog5.6.3 现在(2020/12/08)还有bug,这里强制使用5.6.1
+  ```
+  pod 'RangersAppLog','5.6.1'
+  ```
+
   ```
   pre_install do |installer|
     # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
